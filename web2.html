@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPI CONFIG SUCCESS</title>
+    <style>
+        @font-face {
+            font-family: 'Audiowide';
+            src: url('assets/fonts/Audiowide-Regular.woff2') format('woff2'),
+                 url('assets/fonts/Audiowide-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Audiowide', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000;
+            color: #f1f2f3;
+            text-align: center;
+        }
+
+        .success-container {
+            background: #333333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 320px;
+        }
+
+        .success-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .success-container .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .success-container button {
+            padding: 10px;
+            background-color: #a8a8a8;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .success-container button:hover {
+            background-color: #3f3f3f;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <h1>DPI CONFIG MADE BY HAIDANGREALLIFE</h1>
+        <div class="button-group">
+            <button onclick="optimizeDPIConfig()">OPTIMIZE DPI CONFIG 2.0</button>
+            <button onclick="downloadConfig()">DOWNLOAD CONFIG</button>
+        </div>
+    </div>
+
+    <script>
+        function optimizeDPIConfig() {
+            // Simulate cleaning network and clearing cache
+            alert("Optimizing DPI CONFIG 2.0...\nSUCCESS!!!");
+            // Clearing cache (simulated, only affects the current session)
+            if ('caches' in window) {
+                caches.keys().then(function(names) {
+                    for (let name of names) {
+                        caches.delete(name);
+                    }
+                });
+            }
+        }
+
+        function downloadConfig() {
+            const link = document.createElement('a');
+            link.href = 'https://download1073.mediafire.com/nhv4zn90hhzg-TwgAmsCDcEn9ltkRNzRCPLXQ4PJjL3ZXwMnwmJGeGjrMKLAsAdnPtq4w-laDZrL36A53oXD--9Ba-yGZzmNsoVHeNLy4RzQz6GkYbIVCopLfHNzBMBl6EIGZEJMCwIT5TE71FmVGfZ1EIpRlVJM73L19-7eDKZv/gj2fw72bg60djee/DPICONFIG+LUXURY.mobileconfig'; // Replace with your file URL
+            link.download = 'DPICONFIG+LUXURY.mobileconfig'; // Suggested file name
+            link.click();
+        }
+    </script>
+</body>
+</html>

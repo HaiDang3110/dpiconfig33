@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DPI CONFIG 2.0 LOGIN</title>
+    <style>
+        @font-face {
+            font-family: 'Audiowide-Regular';
+            src: url('C:/Users/HaiDang/Desktop/src hai dang/Audiowide-Regular.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Audiowide-Regular', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000;
+            color: #f1f2f3;
+        }
+        .login-container {
+            background: #333333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            text-align: center;
+        }
+        .login-container img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .login-container input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #E9ECEF;
+            color: #343A40;
+            box-sizing: border-box;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(137, 138, 139);
+            color: rgb(53, 53, 53);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #000000;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="luxury.jpg" alt="DPI CONFIG LUXURY 2.0">
+        <h1>DPI CONFIG LUXURY 2.0</h1>
+        <p> KEY </p>
+        <input type="password" id="password" placeholder="Enter Key">
+        <button onclick="checkPassword()">Login</button>
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <script>
+        const correctPassword = "1";
+
+        function checkPassword() {
+            const inputPassword = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            if (inputPassword === correctPassword) {
+                window.location.href = "web2.html";
+            } else {
+                errorMessage.textContent = "Incorrect password. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>
